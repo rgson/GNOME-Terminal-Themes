@@ -8,8 +8,8 @@
 
 _setup_theme() {
 	local dconfp='/org/gnome/terminal/legacy/profiles:'
-	local profile=$(dconf list "$dconfp/" | grep ^: | sed 's/\///g')
+	local profile=$(gsettings get org.gnome.Terminal.ProfilesList default)
 
-	[[ -n $profile ]] && dconf reset -f "$dconfp/$profile/"
+	dconf reset -f "$dconfp/:${profile[2,-2]}/"
 }
 _setup_theme

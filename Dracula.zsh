@@ -9,17 +9,10 @@
 
 _setup_theme() {
 	local dconfp='/org/gnome/terminal/legacy/profiles:'
-	local profile=$(dconf list "$dconfp/" | grep ^: | sed 's/\///g')
-
-	if [[ -z $profile ]]; then
-		echo 'No active profile.' \
-		     'Change something in Profile Preferences to generate one.' >&2
-		exit 1
-	fi
-
-	dset () { dconf write "$dconfp/$profile/$1" "$2" ;}
-	dsets() { dset $1 "'$2'"                         ;}
-	dsetl() { dset $1 "[${(j., .)${:-'$^@[2,-1]'}}]" ;}
+	local profile=$(gsettings get org.gnome.Terminal.ProfilesList default)
+	dset () { dconf write "$dconfp/:${profile[2,-2]}/$1" "$2" ;}
+	dsets() { dset $1 "'$2'"                                  ;}
+	dsetl() { dset $1 "[${(j., .)${:-'$^@[2,-1]'}}]"          ;}
 
 
 	dsets visible-name 'Dracula'
