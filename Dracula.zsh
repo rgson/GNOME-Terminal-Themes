@@ -25,12 +25,11 @@ _setup_theme() {
 	              '#8be9fd' '#bd93f9' '#ff79c6' '#ffffff'
 
 	dset  bold-color-same-as-fg 'true'
-	dset  use-transparent-background 'true'
-	dset  background-transparency-percent '10'
-	dsets cursor-shape 'ibeam'
-	dsets font 'DejaVu Sans Mono 10'
+	dset  use-transparent-background 'false'
+	dsets cursor-shape 'block'
+	dsets cursor-blink-mode 'off'
 
-	dset  use-system-font        'false'
+	dset  use-system-font        'true'
 	dset  use-theme-background   'false'
 	dset  use-theme-colors       'false'
 	dset  use-theme-transparency 'false'
