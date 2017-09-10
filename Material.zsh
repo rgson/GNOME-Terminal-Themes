@@ -19,9 +19,9 @@ _setup_theme() {
 
 	dsets background-color '#263238'
 	dsets foreground-color '#eeffff'
-	dsetl palette '#546e7a' '#f07178' '#c3e88d' '#f78c6c' \
+	dsetl palette '#546e7a' '#f07178' '#c3e88d' '#ffcb6b' \
 	              '#82aaff' '#c792ea' '#89ddff' '#eeffff' \
-	              '#000000' '#f07178' '#c3e88d' '#f78c6c' \
+	              '#000000' '#f07178' '#c3e88d' '#ffcb6b' \
 	              '#82aaff' '#c792ea' '#89ddff' '#ffffff'
 
 	dset  bold-color-same-as-fg 'true'
