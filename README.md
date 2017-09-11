@@ -1,6 +1,6 @@
 # GNOME Terminal themes
 
-A collection of themes for GNOME Terminal (v3.18).
+A collection of themes for GNOME Terminal.
 
 Each theme is stored as a self-contained script which imports the theme.
 
@@ -30,3 +30,14 @@ gsettings list-keys org.gnome.Terminal.Legacy.Profile
 
 More information about the fields can be found in the
 [GNOME Terminal repository](https://github.com/GNOME/gnome-terminal/blob/gnome-3-18/src/org.gnome.Terminal.gschema.xml#L105).
+
+
+## Dependencies
+
+The software listed below is needed for the installer scripts to work.
+They have been tested using the versions listed alongside each program.
+However, they will likely work for a much wider range of versions.
+
+- dconf-cli (0.24.0-2)
+- gnome-terminal (3.18.3)
+- zsh (5.1.1)
