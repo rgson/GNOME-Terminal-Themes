@@ -7,7 +7,7 @@
 # https://github.com/Mayccoll/Gogh/blob/master/content/themes.md#dracula
 ################################################################################
 
-_setup_theme() {
+() {
 	local dconfp='/org/gnome/terminal/legacy/profiles:'
 	local profile=$(gsettings get org.gnome.Terminal.ProfilesList default)
 	dset () { dconf write "$dconfp/:${profile[2,-2]}/$1" "$2" ;}
@@ -33,5 +33,7 @@ _setup_theme() {
 	dset  use-theme-background   'false'
 	dset  use-theme-colors       'false'
 	dset  use-theme-transparency 'false'
+
+
+	unfunction dset dsets dsetl
 }
-_setup_theme

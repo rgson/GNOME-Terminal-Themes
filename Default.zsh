@@ -6,10 +6,9 @@
 # Restores the GNOME Terminal theme to the system's default.
 ################################################################################
 
-_setup_theme() {
+() {
 	local dconfp='/org/gnome/terminal/legacy/profiles:'
 	local profile=$(gsettings get org.gnome.Terminal.ProfilesList default)
 
 	dconf reset -f "$dconfp/:${profile[2,-2]}/"
 }
-_setup_theme
